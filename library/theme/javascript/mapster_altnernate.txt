@@ -1,0 +1,23 @@
+    jQuery('img').mapster({
+                mapKey: 'name',
+                fillOpacity: 0.4,
+                fillColor: "ffffff",
+                stroke: true,
+                strokeColor: "00FF66",
+                strokeOpacity: 1,
+                strokeWidth: 2,
+                singleSelect: true,
+                listKey: 'name',
+                scaleMap: false, //Keep this set to false, the syncmap function will do it - we need the width the image was edited on for initial sync
+                onClick: function (e) {
+                        jQuery('.desc').hide();
+                        jQuery('input:checkbox').each(function(){
+                            if( jQuery(this).data('key') !== e.key ){ jQuery(this).prop('checked', false); }
+                            });
+                        $product = jQuery("#product-list").find("[data-key='"+e.key+"']");
+                        if( $product.length ){ 
+                            $product.prop("checked", true);
+                            jQuery("#product-list").addClass("active");
+                        }
+                 }
+            });

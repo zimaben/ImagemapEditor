@@ -1,0 +1,139 @@
+/*
+Front-End CSS for bt_imagemap plugin
+*/
+body.home area {
+	display: block;
+	cursor: url("images/pointer-1.png") 7 14, auto;
+}
+
+
+
+#product-list {
+font: 26px/20px "Roboto", Roboto, Helvetica, Arial, sans-serif;
+color: #00FF66;
+position: absolute;
+left: 150px;
+top: 150px;
+opacity: 0;
+transition: all .33s;
+padding: 30px;
+background: rgba(0,0,0,.7);
+border-radius: 6px;
+}
+#product-list.active {
+opacity: 1;
+}
+#product-list .desc {
+font: 14px/16px Arial;
+color: lightblue;
+padding: 10px;
+display: none;
+}
+span.sel {
+position: relative;
+top: -20px;
+left: 20px;
+width: 200px;
+}
+.postscript {
+display: block;
+text-align: right;
+}
+a.external {
+padding-right: 24px;
+background: url('images/external.png') no-repeat;
+background-position: right;
+background-size: contain;
+color: white;
+margin: 9px 0;
+right: 0;
+display: block;
+text-align: right;
+}
+span.close {
+width: 30px;
+height: 30px;
+background: url('images/close.png') no-repeat;
+display: block;
+position: absolute;
+right: 10px;
+top: 10px;
+cursor: pointer;
+}
+
+.styled-input-single {
+position: relative;
+padding: 20px 0 20px 40px;
+text-align: left;
+}
+.styled-input-single label {
+cursor: pointer;
+}
+.styled-input-single label:before, .styled-input-single label:after {
+content: '';
+position: absolute;
+top: 50%;
+border-radius: 50%;
+}
+.styled-input-single label:before {
+left: 0;
+width: 30px;
+height: 30px;
+margin: -15px 0 0;
+background: #f7f7f7;
+-webkit-box-shadow: 0 0 1px grey;
+box-shadow: 0 0 1px grey;
+}
+.styled-input-single label:after {
+left: 5px;
+width: 20px;
+height: 20px;
+margin: -10px 0 0;
+opacity: 0;
+background: #00FF66;
+-webkit-transform: translate3d(-40px, 0, 0) scale(0.5);
+transform: translate3d(-40px, 0, 0) scale(0.5);
+-webkit-transition: opacity 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+transition: opacity 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+.styled-input-single input[type="radio"],
+.styled-input-single input[type="checkbox"] {
+position: absolute;
+top: 0;
+left: -9999px;
+visibility: hidden;
+}
+.styled-input-single input[type="radio"]:checked + label:after,
+.styled-input-single input[type="checkbox"]:checked + label:after {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+opacity: 1;
+}
+.styled-input--square label:before, .styled-input--square label:after {
+border-radius: 0;
+}
+.styled-input--rounded label:before {
+border-radius: 10px;
+}
+.styled-input--rounded label:after {
+border-radius: 6px;
+}
+.styled-input--diamond .styled-input-single {
+padding-left: 45px;
+}
+.styled-input--diamond label:before, .styled-input--diamond label:after {
+border-radius: 0;
+}
+.styled-input--diamond label:before {
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.styled-input--diamond input[type="radio"]:checked + label:after,
+.styled-input--diamond input[type="checkbox"]:checked + label:after {
+-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+opacity: 1;
+}
+
